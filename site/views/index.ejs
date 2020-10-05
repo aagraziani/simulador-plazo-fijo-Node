@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Semantic UI -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+
+  <!-- AutoNumeric -->
+  <script src="https://cdn.jsdelivr.net/npm/autonumeric@4.5.4"></script>
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- JS -->
+  <script src="/index.js"></script>
+
+  <title>Simulá tu plazo fijo</title>
+</head>
+
+<body>
+  <h1>Simulador plazo fijo</h1>
+
+  <div class="ui container">
+
+    <div class="simulador">
+
+      <div class="ui segment">
+
+        <h1>Simulá tu plazo fijo</h1>
+
+        <form action="" class="formulario ui form" id="formulario">
+
+          <div class="field">
+
+            <!-- Desplegable bancos -->
+            <select class="ui fluid dropdown" id="desplegable">
+
+              <option value="">-- Seleccioná un banco --</option>
+
+            </select>
+
+            <p class="feedback-banco"></p>
+
+          </div>
+
+          <!-- Fin desplegable bancos -->
+
+          <!-- Campo monto -->
+
+          <div class="field">
+
+            <label id="monto-texto" for="monto">Monto</label>
+
+            <div class="monto-plazo-fijo">
+
+              <div>
+                <div class="campo-monto">
+                  <!--<i class="dollar sign icon"></i> -->
+                  <input type="text" class="monto" id="monto" name="monto" placeholder="Monto">
+                </div>
+                <p class="feedback-monto"></p>
+              </div>
+
+              <div class="is-invalid-monto">
+                <i class="close icon"></i>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Fin campo monto -->
+
+          <!-- Campo dias -->
+
+          <div class="field">
+
+            <label id="plazo-texto" for="dias">Plazo (en días)</label>
+
+            <div class="dias-plazo">
+
+              <div>
+                <div class="campo-dias">
+                  <i class="calendar alternate outline icon"></i>
+                  <input type="text" class="dias" id="dias" name="dias" placeholder="Plazo">
+                </div>
+                <p class="min-max">(Mínimo 30 días - Máximo 365 días)</p>
+                <p class="feedback-plazo"></p>
+              </div>
+
+              <div class="is-invalid-dias">
+                <i class="close icon"></i>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Fin campo dias -->
+
+
+
+          <button type="submit" class="ui positive basic button">Calcular</button>
+
+          <div id="texto">
+            <p class="texto">Las app es sólo de carácter consultivo.</p>
+            <p class="texto">Las tasas son las informadas por el Banco Central para plazos fijos a 30 días.</p>
+            <p class="texto">Las tasas para plazos mayores o clientes especiales pueden variar.</p>
+          </div>
+
+        </form>
+
+        <!-- Resultados -->
+
+        <div class="ui relaxed divided list resultado hide">
+
+          <div class="item">
+            <p id="capital">Capital: </p>
+          </div>
+
+          <div class="item">
+            <p id="cantidad-dias">Plazo: </p>
+          </div>
+
+          <div class="item">
+            <p id="tna">TNA: </p>
+          </div>
+
+          <div class="item">
+            <p id="interes-ganado">Interses ganados: </p>
+          </div>
+
+          <div class="item">
+            <p id="capital-total">Capital total: </p>
+          </div>
+
+          <div class="item">
+            <button type="submit" class="ui positive basic button" id="reset">Calcular de nuevo</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

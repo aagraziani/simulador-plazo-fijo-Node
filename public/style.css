@@ -1,0 +1,70 @@
+div.simulador {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.hide {
+  display: none;
+}
+
+#desplegable {
+  margin-bottom: 10px;
+}
+
+#monto-texto, #plazo-texto {
+  margin-bottom: 10px;
+}
+
+.monto-plazo-fijo, .dias-plazo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.campo-monto, .campo-dias {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+p.min-max {
+  color: darkgrey;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+i.dollar, i.calendar {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+p.feedback {
+  margin-top: 5px;
+}
+
+#texto {
+  margin-top: 20px;
+  border-top: 1px solid darkgrey;
+  padding-top: 20px;
+}
+
+p.texto {
+  color: darkgrey;
+  line-height: 7px;
+}
+
+.is-invalid-monto, .is-invalid-dias {
+  margin-left: 10px;
+  color: red;
+  font-size: 35px;
+}
+
+.item {
+  margin: 5px 0px 5px 0px;
+}
+
+#reset {
+  margin-top: 20px;
+}
