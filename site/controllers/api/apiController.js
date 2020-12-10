@@ -10,7 +10,7 @@ let controlador = {
 
         let page = await browser.newPage();
 
-        await page.goto(tasasUrl, { waitUntil: 'networkidle2' });
+        await page.goto(tasasUrl, { waitUntil: 'domcontentloaded' });
 
         let data = await page.evaluate(() => {
 

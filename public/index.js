@@ -29,7 +29,9 @@ window.addEventListener('load', function () {
         })
 
         .then(function (jsonResponse) {
-            console.log(jsonResponse);
+            
+            //console.log(jsonResponse);
+            
             for (let i = 0; i < jsonResponse.data.length; i++) {
                 if (jsonResponse.data[i] != '') {
                     desplegable.innerHTML += "<option value=" + jsonResponse.data.indexOf(jsonResponse.data[i]) + ">" + jsonResponse.data[i][0] + "</option>";
@@ -101,10 +103,7 @@ window.addEventListener('load', function () {
                 };
 
             };
-        })
-    
-
-    
+        });
 
     reset.onclick = function () {
         location.reload();
